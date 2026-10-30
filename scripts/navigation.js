@@ -1,5 +1,5 @@
 
-const menuToggle = document.querySelector("#menuToggle");
+const menuToggle = document.querySelector("#menuButton");
 const primaryNav = document.querySelector("#primaryNav");
 
 if (menuToggle && primaryNav) {
