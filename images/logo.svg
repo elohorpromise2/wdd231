@@ -1,0 +1,7 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" rx="22" fill="#142b55"></rect>
+    <path d="M20 20h60v60H20z" fill="#315eaa" rx="12"></path>
+    <text x="50" y="61" font-family="Arial, sans-serif" font-size="32" font-weight="700" text-anchor="middle" fill="#ffffff">PE</text>
+    <circle cx="77" cy="23" r="8" fill="#9d8cf5"></circle>
+</svg>
