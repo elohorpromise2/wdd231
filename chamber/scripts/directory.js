@@ -80,7 +80,7 @@ function displayMembers(members) {
 
         imageWrapper.appendChild(image);
 
-        const name = document.createElement("h3");
+        const name = document.createElement("h2");
         name.textContent = member.name;
 
         const description = document.createElement("p");

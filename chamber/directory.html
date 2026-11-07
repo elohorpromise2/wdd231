@@ -15,6 +15,7 @@
     <meta property="og:url" content="https://elohorpromise2.github.io/wdd231/chamber/directory.html">
     <meta property="og:image"
         content="https://elohorpromise2.github.io/wdd231/chamber/images/right-click-technologies.webp">
+
     <title>Business Directory | Abuja Chamber of Commerce</title>
 
     <link rel="icon" href="icons/favicon.ico">
@@ -67,7 +68,9 @@
             </p>
         </section>
 
-        <section class="directory-section">
+        <section class="directory-section" aria-labelledby="listings-heading">
+            <h2 id="listings-heading" class="visually-hidden">Business Listings</h2>
+
             <div class="view-buttons">
                 <button id="grid-button" class="active-view" aria-pressed="true">
                     ▦ Grid View
@@ -80,14 +83,15 @@
 
             <p id="loading-message" role="status">Loading businesses...</p>
 
-            <section id="members-container" class="grid" aria-label="Abuja business listings">
-            </section>
+            <div id="members-container" class="grid"
+                aria-label="Abuja business listings">
+            </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-contact">
-            <h3>Abuja Chamber of Commerce</h3>
+            <h2>Abuja Chamber of Commerce</h2>
             <p>Abuja, Federal Capital Territory, Nigeria</p>
             <p>Email: info@abujachamber.example</p>
             <p>Phone: +234 800 000 0000</p>
