@@ -1,0 +1,66 @@
+
+[
+  {
+    "name": "Right Click Technologies Ltd",
+    "address": "Suite C08, Efab Mall Extension, Area 11, Garki 2, Abuja, FCT",
+    "phone": "+234 809 997 7043",
+    "website": "https://www.rightclickng.com/",
+    "image": "right-click-technologies.webp",
+    "membershipLevel": 3,
+    "description": "ICT consulting, software development, technology equipment and renewable energy solutions."
+  },
+  {
+    "name": "Neo Cloud Technologies",
+    "address": "Suite C30 & 31, MIB Plaza, 1st Avenue, Gwarinpa, Abuja, FCT",
+    "phone": "+234 704 455 9944",
+    "website": "https://www.google.com/search?q=Neo+Cloud+Technologies+Abuja",
+    "image": "neo-cloud-technologies.webp",
+    "membershipLevel": 2,
+    "description": "ICT and computer training services in Abuja."
+  },
+  {
+    "name": "Jace Technologies",
+    "address": "No. 13, Apo Resettlement, Zone D, Abuja, FCT",
+    "phone": "0803 771 6337",
+    "website": "https://www.google.com/search?q=Jace+Technologies+Abuja",
+    "image": "jace-technologies.webp",
+    "membershipLevel": 1,
+    "description": "Technology business listed in Apo Resettlement, Abuja."
+  },
+  {
+    "name": "DHL Express",
+    "address": "Zone 3, Fidelity Place, 7 Kabale Close, off Sultan Abubakar Way, Wuse, Abuja",
+    "phone": "+234 808 073 7853",
+    "website": "https://www.dhl.com/ng-en/home.html",
+    "image": "dhl-express.webp",
+    "membershipLevel": 3,
+    "description": "International courier, shipping and logistics services."
+  },
+  {
+    "name": "Mshel Homes Limited",
+    "address": "No. 2 Julius Adelusi Street, Guzape, Abuja, FCT",
+    "phone": "+234 700 700 1122",
+    "website": "https://app.mshelhomes.com/about",
+    "image": "mshel-homes.webp",
+    "membershipLevel": 2,
+    "description": "Real estate development, property marketing and housing services."
+  },
+  {
+    "name": "Aptech Computer Education",
+    "address": "3rd Floor, 740 Aminu Kano Crescent, Wuse 2, Abuja, FCT",
+    "phone": "+234 808 325 4623",
+    "website": "https://aptech-nigeria.com/",
+    "image": "aptech-computer-education.webp",
+    "membershipLevel": 3,
+    "description": "Information technology education, professional training and computer courses."
+  },
+  {
+    "name": "General and Health Logistics International Ltd",
+    "address": "622 Atiku Abubakar Way, Idu Industrial District, Abuja, FCT",
+    "phone": "0803 303 9280",
+    "website": "https://www.google.com/search?q=General+and+Health+Logistics+International+Ltd+Abuja",
+    "image": "general-health-logistics.webp",
+    "membershipLevel": 1,
+    "description": "Logistics and supply services based in Abuja."
+  }
+]
