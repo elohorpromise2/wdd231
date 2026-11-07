@@ -1,24 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Explore the Abuja Chamber of Commerce business directory and discover businesses and services in Abuja, Nigeria.">
+    <meta name="description"
+        content="Explore the Abuja Chamber of Commerce business directory and discover businesses and services in Abuja, Nigeria.">
     <meta name="author" content="Promise Omamuyovwi Elohor">
 
     <meta property="og:title" content="Abuja Chamber of Commerce | Business Directory">
     <meta property="og:description" content="Discover businesses and services in Abuja, Nigeria.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://elohorpromise2.github.io/wdd231/chamber/directory.html">
-
+    <meta property="og:image"
+        content="https://elohorpromise2.github.io/wdd231/chamber/images/right-click-technologies.webp">
     <title>Business Directory | Abuja Chamber of Commerce</title>
 
     <link rel="icon" href="icons/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
@@ -34,13 +40,12 @@
             <div class="logo">
                 <div class="logo-symbol">ACC</div>
                 <div>
-                    <h1>Abuja Chamber of Commerce</h1>
+                    <p class="site-name">Abuja Chamber of Commerce</p>
                     <p>Connecting Businesses, Building Abuja</p>
                 </div>
             </div>
 
-            <button id="menu-button" aria-label="Open navigation menu"
-                aria-expanded="false">
+            <button id="menu-button" aria-label="Open navigation menu" aria-expanded="false">
                 ☰
             </button>
         </div>
@@ -55,7 +60,7 @@
 
     <main>
         <section class="directory-intro">
-            <h2>Business Directory</h2>
+            <h1>Business Directory</h1>
             <p>
                 Discover businesses and organizations contributing
                 to the growth and development of Abuja.
@@ -75,8 +80,7 @@
 
             <p id="loading-message" role="status">Loading businesses...</p>
 
-            <section id="members-container" class="grid"
-                aria-label="Abuja business listings">
+            <section id="members-container" class="grid" aria-label="Abuja business listings">
             </section>
         </section>
     </main>
@@ -97,4 +101,5 @@
         </div>
     </footer>
 </body>
+
 </html>
