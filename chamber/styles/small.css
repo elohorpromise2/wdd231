@@ -437,3 +437,11 @@ nav a:focus-visible {
     outline: 3px solid var(--gold);
     outline-offset: 3px;
 }
+
+footer a {
+    color: var(--white);
+}
+
+footer a:hover {
+    color: var(--gold);
+}
