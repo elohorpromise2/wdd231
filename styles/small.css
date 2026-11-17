@@ -350,6 +350,10 @@ h3 {
     border-radius: 12px;
     background: var(--white);
     box-shadow: var(--shadow);
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
 }
 
 .course-card.completed {
@@ -496,3 +500,20 @@ h3 {
         transition-duration: 0.01ms;
     }
   }
+
+  /* Modal Dialog */
+dialog {
+    width: 90%;
+    max-width: 600px;
+    padding: 2rem;
+    border: none;
+    border-radius: 12px;
+    background-color: white;
+    color: #222;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Background */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
