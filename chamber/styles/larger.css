@@ -104,3 +104,47 @@
     }
 
 }
+
+/* =========================================
+   CHAMBER JOIN PAGE - DESKTOP LAYOUT
+========================================= */
+
+@media screen and (min-width: 38rem) {
+
+    .membership-section {
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: start;
+        gap: 25px;
+    }
+
+    .membership-form-container,
+    .membership-cards-container {
+        padding: 25px;
+    }
+
+    .membership-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .join-intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .thankyou-section {
+        padding: 35px;
+    }
+
+}
+
+@media screen and (min-width: 64rem) {
+
+    .membership-section {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 35px;
+    }
+
+    .membership-cards {
+        grid-template-columns: 1fr;
+    }
+
+}

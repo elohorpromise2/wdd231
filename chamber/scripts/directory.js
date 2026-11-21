@@ -1,20 +1,9 @@
 
-const menuButton = document.querySelector("#menu-button");
-const navigation = document.querySelector("#navigation");
+"use strict";
 
-menuButton.addEventListener("click", () => {
-    navigation.classList.toggle("open");
-
-    const isOpen = navigation.classList.contains("open");
-
-    menuButton.setAttribute("aria-expanded", isOpen);
-    menuButton.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation menu" : "Open navigation menu"
-    );
-
-    menuButton.textContent = isOpen ? "✕" : "☰";
-});
+/* =========================================
+   BUSINESS DIRECTORY
+========================================= */
 
 const membersContainer = document.querySelector("#members-container");
 const loadingMessage = document.querySelector("#loading-message");
@@ -22,8 +11,15 @@ const loadingMessage = document.querySelector("#loading-message");
 const gridButton = document.querySelector("#grid-button");
 const listButton = document.querySelector("#list-button");
 
+
+/* =========================================
+   LOAD BUSINESS DATA
+========================================= */
+
 async function getMembers() {
+
     try {
+
         const response = await fetch("./data/members.json");
 
         if (!response.ok) {
@@ -37,23 +33,35 @@ async function getMembers() {
         }
 
         displayMembers(members);
+
         loadingMessage.textContent = "";
 
     } catch (error) {
+
         console.error("Directory loading error:", error);
 
         loadingMessage.textContent =
             "Sorry, the business directory could not be loaded. Please try again.";
+
     }
+
 }
 
+
+/* =========================================
+   DISPLAY BUSINESS CARDS
+========================================= */
+
 function displayMembers(members) {
+
     membersContainer.innerHTML = "";
 
     members.forEach((member) => {
+
         const card = document.createElement("article");
         card.classList.add("member-card");
 
+        // Business image
         const imageWrapper = document.createElement("div");
         imageWrapper.classList.add("member-image");
 
@@ -64,6 +72,7 @@ function displayMembers(members) {
         image.loading = "lazy";
 
         image.onerror = () => {
+
             console.error(
                 `Image failed to load for ${member.name}:`,
                 image.src
@@ -76,24 +85,31 @@ function displayMembers(members) {
             fallback.textContent = "Business Image Unavailable";
 
             imageWrapper.appendChild(fallback);
+
         };
 
         imageWrapper.appendChild(image);
 
+        // Business name
         const name = document.createElement("h2");
         name.textContent = member.name;
 
+        // Business description
         const description = document.createElement("p");
-        description.textContent = member.description || "Business in Abuja.";
+        description.textContent =
+            member.description || "Business in Abuja.";
 
+        // Business address
         const address = document.createElement("p");
-        address.innerHTML = `<strong>Address:</strong> `;
+        address.innerHTML = "<strong>Address:</strong> ";
         address.append(document.createTextNode(member.address));
 
+        // Business phone
         const phone = document.createElement("p");
-        phone.innerHTML = `<strong>Phone:</strong> `;
+        phone.innerHTML = "<strong>Phone:</strong> ";
         phone.append(document.createTextNode(member.phone));
 
+        // Membership level
         const membership = document.createElement("p");
         const level = Number(member.membershipLevel);
 
@@ -105,16 +121,21 @@ function displayMembers(members) {
 
         membership.innerHTML = "<strong>Membership:</strong> ";
         membership.append(
-            document.createTextNode(membershipNames[level] || "Member")
+            document.createTextNode(
+                membershipNames[level] || "Member"
+            )
         );
 
+        // Business website
         const link = document.createElement("a");
+
         link.href = member.website;
         link.textContent = "Visit Website";
         link.target = "_blank";
         link.rel = "noopener noreferrer";
         link.classList.add("website-link");
 
+        // Add all elements to the card
         card.append(
             imageWrapper,
             name,
@@ -126,12 +147,20 @@ function displayMembers(members) {
         );
 
         membersContainer.appendChild(card);
+
     });
 
     console.log(`${members.length} businesses loaded successfully.`);
+
 }
 
+
+/* =========================================
+   GRID VIEW
+========================================= */
+
 gridButton.addEventListener("click", () => {
+
     membersContainer.classList.add("grid");
     membersContainer.classList.remove("list");
 
@@ -140,9 +169,16 @@ gridButton.addEventListener("click", () => {
 
     gridButton.setAttribute("aria-pressed", "true");
     listButton.setAttribute("aria-pressed", "false");
+
 });
 
+
+/* =========================================
+   LIST VIEW
+========================================= */
+
 listButton.addEventListener("click", () => {
+
     membersContainer.classList.add("list");
     membersContainer.classList.remove("grid");
 
@@ -151,6 +187,12 @@ listButton.addEventListener("click", () => {
 
     listButton.setAttribute("aria-pressed", "true");
     gridButton.setAttribute("aria-pressed", "false");
+
 });
+
+
+/* =========================================
+   INITIALIZE DIRECTORY
+========================================= */
 
 getMembers();
